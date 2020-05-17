@@ -1,0 +1,18 @@
+<body>
+    <div class = "header">
+        <h1>여기에 아기사자들 가져와</h1>
+    </div>
+    <div>
+        <a href = "{% url 'home' %}">뒤로가기</a>
+    </div>
+        
+    {% for lion in lion_list %} 
+        <div class = "lion">
+          
+            <h1>{{ lion.name }}</h1>
+            <p>가입 날짜 : {{ lion.create_data }}</p>
+        </div>
+
+    {% endfor %}
+
+</body>

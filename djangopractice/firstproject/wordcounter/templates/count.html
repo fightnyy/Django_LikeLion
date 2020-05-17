@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count</title>
+</head>
+<body>
+    <h1>The Text You used is consisted of {{total}} Words</h1>
+    <a href="{% url 'home' %}">Again...</a>
+    <h1>Input Text</h1>
+    {{fulltext}}
+
+    <h1>Word Count</h1>
+    {% for word,count in wordDict %}
+    {{word}}-{{count}}
+    <br>
+    {% endfor %}
+</body>
+</html>

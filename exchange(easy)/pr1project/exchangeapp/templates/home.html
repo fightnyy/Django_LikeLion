@@ -1,0 +1,30 @@
+!-- home.html -->
+<h1>환율페이지입니다.</h1>
+
+<h3>달러 환전.</h3>
+<form action = "{% url 'usd' %}" method=POST>
+    {% csrf_token %}
+    <input type=number placeholder="한국 돈을 입력하세요." name="korea">
+    <br>
+    <button type=submit >미국</button>
+</form>
+
+<br>
+
+<h3>옌 환전.</h3>
+<form action = "{% url 'jpy' %}" method=POST>
+    {% csrf_token %}
+    <input type=number placeholder="한국 돈을 입력하세요." name="korea">
+    <br>
+    <button type=submit >일본</button>
+</form>
+
+<br>
+
+<h3>캐나다 돈 환전.</h3>
+<form action = "{% url 'can' %}" method=POST>
+    {% csrf_token %}
+    <input type=number placeholder="한국 돈을 입력하세요." name="korea">
+    <br>
+    <button type=submit >캐나다</button>
+</form>

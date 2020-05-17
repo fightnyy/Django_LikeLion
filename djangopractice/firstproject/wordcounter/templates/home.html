@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCounter</title>
+</head>
+<body>
+    <h1>WordCounter에 오신여러분들 환영합니다</h1>
+    <a href="{% url 'about' %}">ABOUT</a>
+    <form action="{% url 'counter' %}">
+    <textarea name="fulltext" id="textarea" cols="40" rows="10"></textarea>
+    <br>
+    <input type="submit" value="count!">
+</form>
+</body>
+</html>

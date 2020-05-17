@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환율</title>
+</head>
+<body>
+    <h1>환율 페이지 입니다.</h1>
+    <a href="{% url 'about'%}"></a>
+    <form action="{% url 'result' %}" method="POST">
+        {% csrf_token %}
+        <div class='form-group'>
+            원화환전
+            <input type="number" placeholder="숫자를 입력하시오" name='korea'>
+        환전하고 싶은 한국 돈을 숫자로 입력하세요.
+        </div>
+        <br>
+    <div class="buttoncollector">
+        <button type="submit" name="USD">미국</button>
+        <button type="submit" name="JPY">일본</button>
+        <button type="submit" name="EUR">유럽연합</button>
+        <button type="submit" name="CNY">중국</button>
+        <button type="submit" name="GBP">영국</button>
+        <button type="submit" name="AUD">호주</button>
+        <button type="submit" name="CAD">캐나다</button>
+        <button type="submit" name="NZD">뉴질랜드</button>
+    </div>
+    </form>
+</body>
+</html>
